@@ -17,14 +17,13 @@ class RedactorAdmin(UserAdmin):
             "Additional info", {"fields": ("years_of_experience",)}
         ),
     )
-    add_fieldsets = UserAdmin.fieldsets + (
+    add_fieldsets = UserAdmin.add_fieldsets + (
         (
-            "Additional info", {"fields": ("years_of_experience",)}
+            "Additional info", {"fields": ("first_name", "last_name", "years_of_experience",)}
         ),
     )
-    search_fields = ("years_of_experience",)
+    search_fields = ("username",)
     ordering = (
-        "years_of_experience",
         "username",
     )
 
