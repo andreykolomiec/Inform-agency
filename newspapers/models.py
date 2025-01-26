@@ -17,18 +17,10 @@ class Redactor(AbstractUser):
     years_of_experience = models.IntegerField(default=0)
 
     class Meta:
-        ordering = ("years_of_experience",)
+        ordering = ("username",)
 
     def __str__(self):
-        return (
-            f"{self.years_of_experience} ("
-            f"username:{self.username},"
-            f" email:{self.email},"
-            f" password:{self.password},"
-            f" first_name:{self.first_name},"
-            f" last_name:{self.last_name}"
-            f")"
-        )
+        return f"{self.username}: ({self.first_name} {self.last_name})"
 
 class Newspaper(models.Model):
     title = models.CharField(max_length=100)
