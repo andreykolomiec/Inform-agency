@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Title: {{ newspaper.title }}</h1>
+  <p><strong>Topic:</strong> {{ newspaper.topic }}</p>
+  <p><strong>Content:</strong> {{ newspaper.content }}</p>
+  <p><strong>Published date:</strong> {{ newspaper.published_date }}</p>
+  <div class="ml-3">
+    <h3>Publishers:</h3>
+    {% for publisher in newspaper.publishers.all %}
+      <hr>
+      <p class="text-muted">{{ publisher.id }}</p>
+      <p>{{ publisher.first_name }} {{ publisher.last_name }}</p>
+      {% if publisher.years_of_experience %}
+        <p>Years of experience: {{ publisher.years_of_experience }}
+      {% endif %}</p>
+    {% empty %}
+      <p>The publisher is missing!</p>
+    {% endfor %}
+  </div>
+{% endblock %}
