@@ -1,0 +1,11 @@
+ {% extends "base.html" %}
+ {% block content %}
+   <h1>Newspaper List</h1>
+   {% if newspaper_list %}
+     <ul>
+      {% for newspaper in newspaper_list %}
+        <li><a href="{{ newspaper.get_absolute_url }}" >{{ newspaper.title }} ({{ newspaper.topic }})</a></li>
+      {% endfor %}
+     </ul>
+   {% endif %}
+ {% endblock %}
