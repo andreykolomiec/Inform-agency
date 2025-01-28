@@ -1,0 +1,15 @@
+ {% extends "base.html" %}
+ {% block content %}
+   <h1>Redactor List</h1>
+   {% if redactor_list %}
+     <ul>
+      {% for redactor in redactor_list %}
+        <li>
+          <a href="{{ redactor.get_absolute_url }}">{{ redactor.username }}</a>
+          ({{ redactor.first_name }} {{ redactor.last_name }})
+          {% if redactor.id == request.user.id %} (Me) {% endif %}
+        </li>
+      {% endfor %}
+     </ul>
+   {% endif %}
+ {% endblock %}
