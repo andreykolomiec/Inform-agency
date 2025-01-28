@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Topic List</h1>
+  <ul>
+    {% for topic in topic_list %}
+      <li><a href="{% url "newspapers:topic-list" %}">{{ topic.name}}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}
