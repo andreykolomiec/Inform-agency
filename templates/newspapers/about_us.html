@@ -1,0 +1,54 @@
+{% extends "base.html"%}
+{% load static %}
+
+{% block content %}
+  <div class="about_us" style="background-image: url('{% static 'img/newspaper_list.jpg' %}')">
+    <div style="margin-left: 20px; color: black">
+      <h2 class="pt-3 mt-7" style="color: black">About us</h2>
+        <p>Welcome to <strong>Inform agency</strong>, your trusted source for up-to-date and reliable information!
+
+      <h4 style="color: black"> Who are we?</h4>
+        <p>We are a team of professional journalists, analysts and experts working to ensure that you receive only verified news, in-depth analytical materials and exclusive investigations.</p>
+
+        <h4 style="color: black">Our mission</h4>
+        <p>We strive to convey the truth, ensure transparency and promote the dissemination of objective information in society.</p>
+        <h4 style="color: black">What do we offer?</h4>
+        <p>
+          📰 <strong>Live news</strong> - current events from around the world in real time.<br>
+          📊<strong>Analytics and research</strong> - in-depth reviews, economic forecasts and social trends.<br>
+          🎤<strong>Exclusive interviews</strong> - conversations with opinion leaders, politicians, experts and public figures.<br>
+          🔎 <strong>Investigative journalism</strong> - exposing facts of public importance.<br>
+          💡 <strong>Reward for useful information</strong> - if you have important data, we are ready to consider it and offer cooperation.<br>
+        </p>
+
+
+        <h4 style="color: black">Our principles</h4>
+        <p>
+          ✔ <strong>Objectivity</strong> - we present facts without bias.<br>
+            <strong>Efficiency</strong> - we respond quickly to events and provide the most up-to-date information.<br>
+            <strong>Independence</strong> - we work without external influence and political manipulation.<br>
+            <strong>Transparency</strong> - we maintain openness in our work with sources and readers.<br>
+        </p>
+
+
+        <p class="text-center display-7 fs-3 fst-italic" style="color: black">
+          Thank you for choosing <strong>Inform agency</strong> - together we create quality journalism!
+        </p>
+    </div>
+    <div class="position-absolute w-100 z-index-1 bottom-0">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 40" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g class="moving-waves">
+            <use xlink:href="#gentle-wave" x="48" y="-1" fill="rgba(255,255,255,0.40)"></use>
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.35)"></use>
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.25)"></use>
+            <use xlink:href="#gentle-wave" x="48" y="8" fill="rgba(255,255,255,0.20)"></use>
+            <use xlink:href="#gentle-wave" x="48" y="13" fill="rgba(255,255,255,0.15)"></use>
+            <use xlink:href="#gentle-wave" x="48" y="16" fill="rgba(255,255,255,0.95)"></use>
+          </g>
+        </svg>
+    </div>
+  </div>
+{% endblock %}
