@@ -13,19 +13,22 @@ class TopicAdmin(admin.ModelAdmin):
 class RedactorAdmin(UserAdmin):
     list_display = UserAdmin.list_display + ("years_of_experience",)
     fieldsets = UserAdmin.fieldsets + (
-        (
-            "Additional info", {"fields": ("years_of_experience",)}
-        ),
+        ("Additional info", {"fields": ("years_of_experience",)}),
     )
     add_fieldsets = UserAdmin.add_fieldsets + (
         (
-            "Additional info", {"fields": ("first_name", "last_name", "years_of_experience",)}
+            "Additional info",
+            {
+                "fields": (
+                    "first_name",
+                    "last_name",
+                    "years_of_experience",
+                )
+            },
         ),
     )
     search_fields = ("username",)
-    ordering = (
-        "username",
-    )
+    ordering = ("username",)
 
 
 @admin.register(Newspaper)
@@ -34,4 +37,3 @@ class NewspaperAdmin(admin.ModelAdmin):
     search_fields = ("title",)
     ordering = ("published_date",)
     list_filter = ("topic",)
-
