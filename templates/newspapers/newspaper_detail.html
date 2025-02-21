@@ -1,21 +1,64 @@
 {% extends "base.html" %}
+{% load crispy_forms_filters %}
+{% load static %}
 
 {% block content %}
-  <h1>Title: {{ newspaper.title }}</h1>
-  <p><strong>Topic:</strong> {{ newspaper.topic }}</p>
-  <p><strong>Content:</strong> {{ newspaper.content }}</p>
-  <p><strong>Published date:</strong> {{ newspaper.published_date }}</p>
-  <div class="ml-3">
-    <h3>Publishers:</h3>
-    {% for publisher in newspaper.publishers.all %}
-      <hr>
-      <p class="text-muted">{{ publisher.id }}</p>
-      <p>{{ publisher.first_name }} {{ publisher.last_name }}</p>
-      {% if publisher.years_of_experience %}
-        <p>Years of experience: {{ publisher.years_of_experience }}
-      {% endif %}</p>
-    {% empty %}
-      <p>The publisher is missing!</p>
-    {% endfor %}
+  <div class="page-header min-vh-75 position-relative"
+       style="background-image: url('{% static 'img/newsroom.jpg' %}')">
+      <div class="container mt-6 pt-5">
+        <div class="card shadow-sm">
+          <div class="card-body text-center">
+             <h1>Title: {{ newspaper.title }}</h1>
+              <div style="text-align: left; display: inline-block; margin-bottom: 20px">
+                <a class="btn btn-primary d-block"
+                   style="margin-bottom: 10px; width: auto"
+                   href="{% url 'newspapers:newspaper-update' pk=newspaper.id %}"
+                >
+                  Edit Newspaper
+                </a>
+              </div>
+              <form method="post" action="{% url 'newspapers:newspaper-delete' pk=newspaper.id %}">
+                {% csrf_token %}
+                <input type="submit" value="Yes, delete"
+                       class="btn btn-danger d-block"
+                       style="margin-bottom: 10px; width: auto" />
+              </form>
+              <p><strong>Topic:</strong> {{ newspaper.topic }}</p>
+              <p><strong>Content:</strong> {{ newspaper.content }}</p>
+              <p><strong>Published date:</strong> {{ newspaper.published_date }}</p>
+              <div class="ml-3">
+                <h3>Publishers:</h3>
+                {% for publisher in newspaper.publishers.all %}
+                  <hr>
+                  <p class="text-muted">{{ publisher.id }}</p>
+                  <p>{{ publisher.first_name }} {{ publisher.last_name }}</p>
+                  {% if publisher.years_of_experience %}
+                    <p>Years of experience: {{ publisher.years_of_experience }}
+                  {% endif %}</p>
+                {% empty %}
+                  <p>The publisher is missing!</p>
+                {% endfor %}
+              </div>
+          </div>
+        </div>
+      </div>
+        <div class="position-absolute w-100 z-index-1 bottom-0">
+          <svg class="waves" xmlns="http://www.w3.org/2000/svg"
+               xmlns:xlink="http://www.w3.org/1999/xlink"
+               viewBox="0 24 150 40" preserveAspectRatio="none" shape-rendering="auto">
+                  <defs>
+                    <path id="gentle-wave" d="M-160
+                     44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/>
+                  </defs>
+                  <g class="moving-waves">
+                    <use xlink:href="#gentle-wave" x="48" y="-1" fill="rgba(255,255,255,0.40)"></use>
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.35)"></use>
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.25)"></use>
+                    <use xlink:href="#gentle-wave" x="48" y="8" fill="rgba(255,255,255,0.20)"></use>
+                    <use xlink:href="#gentle-wave" x="48" y="13" fill="rgba(255,255,255,0.15)"></use>
+                    <use xlink:href="#gentle-wave" x="48" y="16" fill="rgba(255,255,255,0.95)"></use>
+                  </g>
+          </svg>
+    </div>
   </div>
 {% endblock %}
