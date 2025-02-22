@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  <div class="about_us" style="background-image: url('{% static 'img/contact.jpg' %}')">
+    <div style="margin-left: 20px">
+      <h3 class="pt-3 mt-7">Our contacts</h3>
+            <div class="d-flex flex-column lh-lg">
+              <span>📩 Email: [email@inform_agency.com]</span>
+              <span>🌍 Website: <a href="https://www.inform_agency.com" target="_blank">www.inform_agency.com</a></span>
+              <span>📞 P`hone: [+123 456 7890]</span>
+            </div>
+
+      <h3 class="pt-3 mt-5">📱Social media:</h3>
+        <div class="d-flex flex-column lh-lg">
+          <a href="https://www.facebook.com/" target="_blank"
+           style="display: inline-flex; align-items: center; gap: 5px;">
+            Facebook
+            <i class="fab fa-facebook text-lg opacity-8"></i>
+          </a>
+          <a href="https://www.twitter.com/" target="_blank"
+           style="display: inline-flex; align-items: center; gap: 5px;">
+            Twitter
+            <i class="fab fa-twitter text-lg opacity-8"></i>
+          </a>
+          <a href="https://www.instagram.com/" target="_blank"
+           style="display: inline-flex; align-items: center; gap: 5px;">
+            Instagram
+            <i class="fab fa-instagram text-lg opacity-8"></i>
+          </a>
+        </div>
+    </div>
+    <div class="position-absolute w-100 z-index-1 bottom-0">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 40" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g class="moving-waves">
+            <use xlink:href="#gentle-wave" x="48" y="-1" fill="rgba(255,255,255,0.40)"></use>
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.35)"></use>
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.25)"></use>
+            <use xlink:href="#gentle-wave" x="48" y="8" fill="rgba(255,255,255,0.20)"></use>
+            <use xlink:href="#gentle-wave" x="48" y="13" fill="rgba(255,255,255,0.15)"></use>
+            <use xlink:href="#gentle-wave" x="48" y="16" fill="rgba(255,255,255,0.95)"></use>
+          </g>
+        </svg>
+    </div>
+  </div>
+{% endblock %}

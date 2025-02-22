@@ -1,0 +1,75 @@
+{% load static %}
+
+<div class="container position-sticky z-index-sticky top-0 opacity-8">
+  <div class="row">
+    <div class="col-12">
+      <nav class="navbar navbar-expand-lg blur blur-rounded top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-auto w-auto" style="max-width: 70%;">
+        <div class="container-fluid px-0 aligned">
+          <p class="fs-5 text-dark fw-bold">
+            Inform Navigation
+          </p>
+
+          <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon mt-2">
+              <span class="navbar-toggler-bar bar1"></span>
+              <span class="navbar-toggler-bar bar2"></span>
+              <span class="navbar-toggler-bar bar3"></span>
+            </span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-center" id="navigation">
+            <ul class="navbar-nav align-items-center">
+              <li class="nav-item">
+                <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'newspapers:index' %}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% if request.path == 'newspapers/' %}active{% endif %}" href="{% url 'newspapers:newspaper-list' %}">All newspapers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% if request.path == 'topics/' %}active{% endif %}" href="{% url 'newspapers:topic-list' %}">All topics</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% if request.path == 'redactors/' %}active{% endif %}" href="{% url 'newspapers:redactor-list' %}">All redactors</a>
+              </li>
+
+              {% if user.is_authenticated %}
+                <li class="nav-item">
+                  <form method="post" action="{% url 'logout' %}" class="d-inline">
+                  {% csrf_token %}
+                  <button type="submit" class="nav-link p-0 border-0 text-decoration-none bg-transparent">Logout</button>
+                  </form>
+                </li>
+                <li class="nav-item ms-auto">
+                  <span class="nav-link text-muted">User: {{ user.username }}</span>
+                </li>
+              {% else %}
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'login' %}">Login</a>
+                </li>
+              {% endif %}
+            </ul>
+
+            <form class="d-flex" role="search" method="get" action="{{ request.path }}">
+              {% if request.resolver_match.view_name == 'newspapers:newspaper-list' %}
+                <input class="form-control me-2" type="search" name="topic" placeholder="Search by topic"
+                       aria-label="Search" value="{{ request.GET.topic }}">
+
+              {% elif request.resolver_match.view_name == 'newspapers:redactor-list' %}
+                <input class="form-control me-2" type="search" name="username" placeholder="Search by username"
+                       aria-label="Search" value="{{ request.GET.username }}">
+
+              {% elif request.resolver_match.view_name == 'newspapers:topic-list' %}
+                <input class="form-control me-2" type="search" name="name" placeholder="Search by name"
+                       aria-label="Search" value="{{ request.GET.name }}">
+              {% endif %}
+
+              <button class="btn btn-outline-success" type="submit" style="background: none; border: none; box-shadow: none"><img src="{% static 'images/free-icon-3d-magnifier-10473538.png' %}" alt="Search" width="30" height="30"></button>
+              </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>

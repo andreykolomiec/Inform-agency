@@ -1,0 +1,9 @@
+{% load static %}
+<footer class="bg-dark text-center py-4 pt-5 bg-transparent">
+    <p>&copy; {% now "Y" %} Inform_agency</p>
+    <ul class="list-inline">
+        <li class="list-inline-item"><a href="{% url 'newspapers:index' %}" class="text-primary">Home</a></li>
+        <li class="list-inline-item"><a href="{% url 'newspapers:about-us' %}" class="text-primary">About us</a></li>
+        <li class="list-inline-item"><a href="{% url 'newspapers:contacts' %}" class="text-primary">Contacts</a></li>
+    </ul>
+</footer>
