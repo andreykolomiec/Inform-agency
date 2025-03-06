@@ -1,0 +1,325 @@
+[
+{
+    "model": "newspapers.topic",
+    "pk": 1,
+    "fields": {
+        "name": "Politics"
+    }
+},
+{
+    "model": "newspapers.topic",
+    "pk": 2,
+    "fields": {
+        "name": "Crime"
+    }
+},
+{
+    "model": "newspapers.topic",
+    "pk": 3,
+    "fields": {
+        "name": "Bussines"
+    }
+},
+{
+    "model": "newspapers.topic",
+    "pk": 4,
+    "fields": {
+        "name": "Art"
+    }
+},
+{
+    "model": "newspapers.topic",
+    "pk": 5,
+    "fields": {
+        "name": "Trade"
+    }
+},
+{
+    "model": "newspapers.topic",
+    "pk": 6,
+    "fields": {
+        "name": "Weather"
+    }
+},
+{
+    "model": "newspapers.topic",
+    "pk": 7,
+    "fields": {
+        "name": "Nature"
+    }
+},
+{
+    "model": "newspapers.topic",
+    "pk": 8,
+    "fields": {
+        "name": "Medicine"
+    }
+},
+{
+    "model": "newspapers.topic",
+    "pk": 12,
+    "fields": {
+        "name": "Test topic"
+    }
+},
+{
+    "model": "newspapers.topic",
+    "pk": 13,
+    "fields": {
+        "name": "Other topic"
+    }
+},
+{
+    "model": "newspapers.redactor",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$jgWp3BAR8Go0HQhUp7ZP6B$Fq0vXvNc9kajM34fjT9fTyZHz+2mFUSszpWXD/Ao6bc=",
+        "last_login": "2025-03-05T11:03:24.525Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "Benjamin",
+        "last_name": "Franklin",
+        "email": "admin@admin.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-01-25T20:46:10Z",
+        "years_of_experience": 19,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "newspapers.redactor",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$Et8n9btqu2cbpGnWHGby0v$oip1w456TzlvHUHCl8TsUMJSoVpb16CZHsXy8KMzUvI=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "joseph_pul",
+        "first_name": "Joseph",
+        "last_name": "Pulitzer",
+        "email": "joseph@pul.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-01-26T18:37:09Z",
+        "years_of_experience": 39,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "newspapers.redactor",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$x5YZwBkoJequvYNecOUfvO$oITQ3o5QqKBs22eyou68hyuMfoL2xvgmsCEMJT05iK8=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "marg_hodge",
+        "first_name": "Margaret",
+        "last_name": "Hodge",
+        "email": "marg@hodge.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-01-26T18:50:07Z",
+        "years_of_experience": 7,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "newspapers.redactor",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$jhqTbSZWSUCOjM8l0xja2T$bPCDW540n37THwg9IhpA1huJbiWRnwZRR03lCo+4xis=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "harold_evans",
+        "first_name": "Harold",
+        "last_name": "Evans",
+        "email": "harold@evans.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-01-26T18:53:01Z",
+        "years_of_experience": 14,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "newspapers.redactor",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$GEjLJmTZjzL1eQiX2avvy4$fAI8n30WZKQlJwRg8ia6ux/3JHoR1lRVP867aTjls5U=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "kat_graham",
+        "first_name": "Katharine",
+        "last_name": "Graham",
+        "email": "kat@graham.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-01-26T18:56:13Z",
+        "years_of_experience": 10,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "newspapers.redactor",
+    "pk": 7,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$OMfDbCKWTPz0gQXonDHs8Q$oAjfYLJm5geOzP07W+E8vrAuoPxipAX2oI05mpViXQk=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "alex_shvec",
+        "first_name": "Alexandr",
+        "last_name": "Shvec",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-01-29T22:21:04.620Z",
+        "years_of_experience": 40,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "newspapers.newspaper",
+    "pk": 1,
+    "fields": {
+        "title": "The Future of Global Democracy: A Political Shift.",
+        "content": "As global politics evolve, democratic systems face new challenges and opportunities. We explore the impact of shifting political tides on international relations and the future of democracy.",
+        "published_date": "2025-01-16",
+        "topic": 1,
+        "publishers": [
+            1
+        ]
+    }
+},
+{
+    "model": "newspapers.newspaper",
+    "pk": 2,
+    "fields": {
+        "title": "Rise in Cybercrime: How Technology is Enabling New Forms of Crime",
+        "content": "Cybercrime is becoming an increasing threat as technology advances. This article delves into how cybercriminals exploit vulnerabilities and the strategies law enforcement is using to combat them.",
+        "published_date": "2025-01-19",
+        "topic": 2,
+        "publishers": [
+            5
+        ]
+    }
+},
+{
+    "model": "newspapers.newspaper",
+    "pk": 3,
+    "fields": {
+        "title": "The Changing Landscape of Global Markets in 2025",
+        "content": "As we move further into 2025, the global markets are undergoing significant transformations. Businesses must adapt to stay competitive in a rapidly evolving economic environment.",
+        "published_date": "2025-01-20",
+        "topic": 3,
+        "publishers": [
+            4
+        ]
+    }
+},
+{
+    "model": "newspapers.newspaper",
+    "pk": 4,
+    "fields": {
+        "title": "The Resurgence of Classical Art in Modern Times",
+        "content": "In the age of digital art and modern creativity, classical art is experiencing a resurgence. This article explores the renewed interest in traditional forms of artistic expression in today's society.",
+        "published_date": "2025-01-21",
+        "topic": 4,
+        "publishers": [
+            5
+        ]
+    }
+},
+{
+    "model": "newspapers.newspaper",
+    "pk": 5,
+    "fields": {
+        "title": "Global Trade in 2025: Trends and Opportunities for Growth",
+        "content": "The global trade scene is constantly changing, with new opportunities emerging in the Asia-Pacific region and challenges in the European market. This article highlights key trends and opportunities in international trade for businesses.",
+        "published_date": "2025-01-22",
+        "topic": 5,
+        "publishers": [
+            6
+        ]
+    }
+},
+{
+    "model": "newspapers.newspaper",
+    "pk": 6,
+    "fields": {
+        "title": "2025: A Year of Extreme Weather Events and Climate Change Awareness",
+        "content": "As climate change accelerates, 2025 is predicted to witness more extreme weather events worldwide. This article looks at the latest predictions and what societies need to do to mitigate these impacts.",
+        "published_date": "2025-01-23",
+        "topic": 6,
+        "publishers": [
+            1
+        ]
+    }
+},
+{
+    "model": "newspapers.newspaper",
+    "pk": 7,
+    "fields": {
+        "title": "Political Turmoil in the Middle East: WhatТs Next for the Region?",
+        "content": "The political situation in the Middle East continues to evolve. What are the prospects for peace and stability in this critical part of the world? Our experts weigh in on the future of the region.",
+        "published_date": "2025-01-24",
+        "topic": 1,
+        "publishers": [
+            2
+        ]
+    }
+},
+{
+    "model": "newspapers.newspaper",
+    "pk": 8,
+    "fields": {
+        "title": "The Legal and Social Consequences of Organized Crime",
+        "content": "Organized crime continues to plague many regions around the world. This article explores the social, legal, and economic impact of these criminal networks.",
+        "published_date": "2025-01-26",
+        "topic": 2,
+        "publishers": [
+            4
+        ]
+    }
+},
+{
+    "model": "newspapers.newspaper",
+    "pk": 9,
+    "fields": {
+        "title": "Medicine of the future",
+        "content": "This article is about innovative developments in the field of medicine",
+        "published_date": "2025-01-29",
+        "topic": 8,
+        "publishers": [
+            4
+        ]
+    }
+},
+{
+    "model": "newspapers.newspaper",
+    "pk": 16,
+    "fields": {
+        "title": "Test Newspaper",
+        "content": "test_content",
+        "published_date": "2025-02-04",
+        "topic": 12,
+        "publishers": []
+    }
+},
+{
+    "model": "newspapers.newspaper",
+    "pk": 17,
+    "fields": {
+        "title": "Other Newspaper2",
+        "content": "other_content",
+        "published_date": "2025-02-04",
+        "topic": 13,
+        "publishers": []
+    }
+}
+]
